@@ -9,6 +9,7 @@ from pdf2docx import Converter
 import subprocess
 import shutil
 
+
 @app.route('/juntar-pdf', methods=['POST'])
 def juntarPdf():
     if request.method == 'POST':

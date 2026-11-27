@@ -12,7 +12,7 @@ __pycache__/
 *.tmp
 
 # Variáveis de ambiente
-.env
+venv312
 
 # Configurações de editores
 .vscode/
