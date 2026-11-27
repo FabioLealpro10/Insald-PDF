@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ISLAND PDF</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">📕</div>
+
+            <div>
+                <h1>ISLAND PDF</h1>
+                <p>Ferramentas rápidas e fáceis para trabalhar com seus arquivos PDF</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="cards">
+
+            <a href="/getJuntaPdf" class="card">
+                <div class="card-icon">📑</div>
+                <h2>Juntar PDFs</h2>
+                <p>Combine vários arquivos PDF em um único documento.</p>
+                <span class="card-button">Acessar →</span>
+            </a>
+
+            <a href="/getJuntaImgPdf" class="card">
+                <div class="card-icon">🖼️</div>
+                <h2>Imagens em PDF</h2>
+                <p>Transforme suas imagens em um arquivo PDF.</p>
+                <span class="card-button">Acessar →</span>
+            </a>
+
+            <a href="/cortar-pdf" class="card">
+                <div class="card-icon">✂️</div>
+                <h2>Cortar PDF</h2>
+                <p>Recorte as páginas do seu arquivo PDF.</p>
+                <span class="card-button">Acessar →</span>
+            </a>
+
+            <a href="/transformar-pdf-word" class="card">
+                <div class="card-icon">📄 ➜ 📝</div>
+                <h2>PDF para Word</h2>
+                <p>Converta seus arquivos PDF para o formato Word.</p>
+                <span class="card-button">Acessar →</span>
+            </a>
+
+            <a href="/transformar-word-pdf" class="card">
+                <div class="card-icon">📝 ➜ 📕</div>
+                <h2>Word para PDF</h2>
+                <p>Converta seus documentos Word para PDF.</p>
+                <span class="card-button">Acessar →</span>
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>🛡️ Rápido <span>•</span> Seguro <span>•</span> Fácil de usar</p>
+    </footer>
+
+</body>
+</html>

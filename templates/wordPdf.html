@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Word para PDF | ISLAND PDF</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/word_pdf.css') }}">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">📕</div>
+            <h1>ISLAND PDF</h1>
+            <p>Conversor de Word para PDF</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="card">
+
+            <div class="card-header">
+                <h2>Converter Word para PDF</h2>
+                <p>Transforme seus documentos Word em arquivos PDF facilmente.</p>
+            </div>
+
+            <form id="formulario">
+
+                <div class="drop-area" id="drop-area">
+
+                    <div class="upload-icon">📝</div>
+
+                    <h3>Arraste seu documento Word até aqui</h3>
+
+                    <p>ou</p>
+
+                    <label for="arquivo" class="btn-selecionar">
+                        Selecionar documento
+                    </label>
+
+                    <input
+                        type="file"
+                        id="arquivo"
+                        accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                        hidden
+                        required
+                    >
+
+                    <span class="formatos">
+                        Formato aceito: DOCX
+                    </span>
+
+                </div>
+
+                <div class="arquivo-info" id="arquivo-info">
+
+                    <div class="arquivo-detalhes">
+
+                        <span class="arquivo-icone">📝</span>
+
+                        <div class="arquivo-texto">
+                            <strong id="nome-arquivo"></strong>
+                            <span id="tamanho-arquivo"></span>
+                        </div>
+
+                    </div>
+
+                    <button type="button" id="btn-remover" class="btn-remover">
+                        ✕
+                    </button>
+
+                </div>
+
+                <div class="informacao">
+                    <span>ℹ️</span>
+                    <p>
+                        A conversão preserva, sempre que possível, a formatação
+                        original do documento. O resultado pode variar conforme
+                        a estrutura do arquivo.
+                    </p>
+                </div>
+
+                <button type="submit" id="btn-converter" disabled>
+                    Converter para PDF
+                </button>
+
+                <p id="mensagem-status" class="mensagem-status"></p>
+
+            </form>
+
+            <a href="/" class="voltar">← Voltar para página inicial</a>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 ISLAND PDF — Ferramentas para seus documentos.</p>
+    </footer>
+
+
+    <script src="{{ url_for('static', filename='js/word_pdf.js') }}"></script>
+
+
+
+</body>
+</html>

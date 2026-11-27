@@ -1,0 +1,373 @@
+
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f6fb;
+    color: #263445;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Cabeçalho */
+.header {
+    background: linear-gradient(120deg, #123b78, #0754a8);
+    color: white;
+    padding: 35px 20px;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logo {
+    font-size: 55px;
+}
+
+.header h1 {
+    font-size: 34px;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+}
+
+.header p {
+    color: #dceaff;
+    font-size: 15px;
+}
+
+
+/* Conteúdo principal */
+.container {
+    width: 100%;
+    max-width: 850px;
+    margin: 45px auto;
+    padding: 0 20px;
+    flex: 1;
+}
+
+
+/* Cartão da ferramenta */
+.tool-container {
+    background: white;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+}
+
+
+/* Título da ferramenta */
+.tool-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tool-icon {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.tool-heading h2 {
+    color: #123b78;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.tool-heading p {
+    color: #718096;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* Área de upload */
+.drop-area {
+    border: 2px dashed #8bb7e9;
+    background: #f5f9ff;
+    border-radius: 14px;
+    padding: 40px 20px;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.drop-area.drag-active {
+    background: #e3efff;
+    border-color: #0754a8;
+}
+
+.upload-icon {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.drop-area h3 {
+    color: #123b78;
+    margin-bottom: 8px;
+}
+
+.drop-area p {
+    color: #718096;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.drop-area small {
+    display: block;
+    color: #8995a5;
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+
+/* Botão selecionar */
+.select-button {
+    display: inline-block;
+    background: #0754a8;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.select-button:hover {
+    background: #123b78;
+}
+
+
+/* Lista de arquivos */
+.files-container {
+    margin-top: 30px;
+}
+
+.files-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.files-heading h3 {
+    color: #263445;
+    font-size: 17px;
+}
+
+.files-heading span {
+    color: #0754a8;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* Lista */
+#lista-imgs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Cada imagem */
+.file-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    padding: 14px 16px;
+    margin-bottom: 10px;
+
+    background: #ffffff;
+    border: 1px solid #dce4ef;
+    border-radius: 10px;
+
+    cursor: grab;
+    user-select: none;
+
+    transition: background 0.2s, border 0.2s;
+}
+
+.file-item:active {
+    cursor: grabbing;
+}
+
+
+/* Durante o arraste */
+.file-item.dragging {
+    opacity: 0.35;
+    background: #e3efff;
+    border: 2px dashed #0875e8;
+}
+
+
+/* Informações */
+.file-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+
+/* Indicador de arraste */
+.drag-handle {
+    font-size: 24px;
+    color: #0875e8;
+    cursor: grab;
+}
+
+
+/* Numeração */
+.file-number {
+    color: #0754a8;
+    font-weight: bold;
+    min-width: 20px;
+}
+
+
+/* Nome */
+.file-name {
+    color: #364152;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* Remover arquivo */
+.remove-button {
+    border: none;
+    background: #ffe8e8;
+    color: #d62828;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.remove-button:hover {
+    background: #ffd2d2;
+}
+
+
+/* Mensagem vazia */
+#mensagem-vazia {
+    text-align: center;
+    color: #8995a5;
+    font-size: 14px;
+    padding: 20px;
+}
+
+
+/* Botão converter */
+.primary-button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+
+    background: linear-gradient(120deg, #123b78, #0754a8);
+    color: white;
+
+    border: none;
+    border-radius: 9px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.primary-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(7, 84, 168, 0.2);
+}
+
+.primary-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/* Voltar */
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    color: #0754a8;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+
+/* Rodapé */
+footer {
+    background: #123b78;
+    color: #dceaff;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+}
+
+footer span {
+    margin: 0 8px;
+    color: #80b8f5;
+}
+
+
+/* Responsividade */
+@media (max-width: 600px) {
+
+    .header h1 {
+        font-size: 27px;
+    }
+
+    .container {
+        margin: 25px auto;
+    }
+
+    .tool-container {
+        padding: 22px 16px;
+    }
+
+    .tool-heading h2 {
+        font-size: 21px;
+    }
+
+    .drop-area {
+        padding: 30px 12px;
+    }
+
+    .file-item {
+        padding: 12px 10px;
+    }
+
+    .file-info {
+        gap: 7px;
+    }
+
+    .file-name {
+        font-size: 12px;
+    }
+
+}

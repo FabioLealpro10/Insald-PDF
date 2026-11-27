@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Converter Imagens em PDF | ISLAND PDF</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/imagens_pdf.css') }}">
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+
+        <div class="header-content">
+
+            <div class="logo">📕</div>
+
+            <div>
+                <h1>ISLAND PDF</h1>
+                <p>Transforme suas imagens em um único arquivo PDF.</p>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- Conteúdo principal -->
+    <main class="container">
+
+        <section class="tool-container">
+
+            <div class="tool-heading">
+
+                <div class="tool-icon">🖼️</div>
+
+                <h2>Converter imagens em PDF</h2>
+
+                <p>
+                    Selecione ou arraste as imagens que deseja
+                    transformar em um documento PDF.
+                </p>
+
+            </div>
+
+
+            <form id="formulario">
+
+                <!-- Área de seleção -->
+                <div class="drop-area" id="drop-area">
+
+                    <div class="upload-icon">☁️</div>
+
+                    <h3>Arraste suas imagens aqui</h3>
+
+                    <p>ou clique no botão abaixo para selecionar</p>
+
+                    <button
+                        type="button"
+                        id="btn-selecionar"
+                        class="select-button">
+
+                        Selecionar imagens
+
+                    </button>
+
+                    <input
+                        type="file"
+                        id="input-img"
+                        accept="image/*"
+                        multiple
+                        hidden
+                    >
+
+                    <small>Formatos aceitos: JPG, JPEG, PNG, WEBP e outros formatos de imagem compatíveis.</small>
+
+                </div>
+
+
+                <!-- Lista de imagens -->
+                <div class="files-container">
+
+                    <div class="files-heading">
+
+                        <h3>Imagens selecionadas</h3>
+
+                        <span id="contador">0 imagens</span>
+
+                    </div>
+
+                    <ul id="lista-imgs"></ul>
+
+                    <p id="mensagem-vazia">
+                        Nenhuma imagem selecionada.
+                    </p>
+
+                </div>
+
+
+                <!-- Botão de conversão -->
+                <button
+                    type="submit"
+                    id="btn-converter"
+                    class="primary-button"
+                    disabled>
+
+                    🖼️ Converter em PDF
+
+                </button>
+
+            </form>
+
+
+            <a href="/" class="back-link">
+                ← Voltar ao início
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- Rodapé -->
+    <footer>
+
+        <p>
+            🛡️ Rápido
+            <span>•</span>
+            Seguro
+            <span>•</span>
+            Fácil de usar
+        </p>
+
+    </footer>
+
+    
+    <script src="{{ url_for('static', filename='js/mergeImg_pdf.js') }}"></script>
+
+
+
+</body>
+
+</html>

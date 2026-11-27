@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Juntar PDFs | PDF Generator</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/merg.css') }}">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">📕</div>
+
+            <div>
+                <h1>ISLAND PDF</h1>
+                <p>Una seus documentos em um único arquivo PDF.</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="tool-container">
+
+            <div class="tool-heading">
+                <div class="tool-icon">📑</div>
+
+                <h2>Juntar arquivos PDF</h2>
+
+                <p>
+                    Selecione ou arraste os arquivos PDF
+                    que deseja combinar.
+                </p>
+            </div>
+
+            <form id="formulario">
+
+                <div class="drop-area" id="drop-area">
+
+                    <div class="upload-icon">☁️</div>
+
+                    <h3>Arraste seus arquivos PDF aqui</h3>
+
+                    <p>ou clique no botão abaixo para selecionar</p>
+
+                    <label for="input-pdf" class="select-button">
+                        Selecionar arquivos
+                    </label>
+
+                    <input
+                        type="file"
+                        id="input-pdf"
+                        accept=".pdf,application/pdf"
+                        multiple
+                        hidden
+                    >
+
+                    <small>Formato aceito: PDF</small>
+
+                </div>
+
+                <div class="files-container">
+
+                    <div class="files-heading">
+                        <h3>Arquivos selecionados</h3>
+                        <span id="contador">0 arquivos</span>
+                    </div>
+
+                    <ul id="lista-pdfs"></ul>
+
+                    <p id="mensagem-vazia">
+                        Nenhum arquivo selecionado.
+                    </p>
+
+                </div>
+
+                <button type="submit" id="btn-juntar" class="primary-button" disabled>
+                    📑 Juntar PDFs
+                </button>
+
+            </form>
+
+            <a href="/" class="back-link">← Voltar ao início</a>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>🛡️ Rápido <span>•</span> Seguro <span>•</span> Fácil de usar</p>
+    </footer>
+
+     <script src="{{ url_for('static', filename='js/merge_pdf.js') }}"></script>
+
+
+</body>
+</html>
